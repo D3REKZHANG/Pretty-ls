@@ -11,7 +11,7 @@ function ls {
         if ($symbols.ContainsKey($ext)){
             Write-Output "$([char]$symbols[$ext]) $item"
         } else {
-            Write-Output "$([char]0xf718) $item"
+            Write-Output "$([char]0xf713) $item"
         }
     }
 }
@@ -22,12 +22,19 @@ $symbols = @{
     css = 0xe74a
     java = 0xe738
     js = 0xe74e
+    json = 0xe60b
+    pdf = 0xf724
     py = 0xe73c
-    psm1 = 0xe73c
+    psm1 = 0xe796
     rb = 0xe739
     rs = 0xe7a8
     scala = 0xe737
     vim = 0xe61e
+
+    md = 0xf718
+    txt = 0xf718
+    log = 0xf718
+    docx = 0xf718
 }
 
 
