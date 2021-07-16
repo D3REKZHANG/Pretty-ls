@@ -1,17 +1,17 @@
 function ls {
     param()
-    $directories = Get-ChildItem -path . -directory
+    $directories = Get-ChildItem -path . -directory -name
     foreach ($item in $directories){
-        Write-Host $([char]0xe5ff) $item
+        Write-Output "$([char]0xe5ff) $item"
     }
     $files = Get-ChildItem -path . -file -name
     foreach ($item in $files){
         $split = $item.Split('.')
         $ext = $split[$split.Count - 1]
         if ($symbols.ContainsKey($ext)){
-            Write-Host $([char]$symbols[$ext]) $item
+            Write-Output "$([char]$symbols[$ext]) $item"
         } else {
-            Write-Host $([char]0xf718) $item
+            Write-Output "$([char]0xf718) $item"
         }
     }
 }
