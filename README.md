@@ -2,17 +2,18 @@
 
 A minimalistic replacement for the `ls` command in Windows Powershell
 
-![image](https://user-images.githubusercontent.com/20462187/125201109-af7bb500-e23b-11eb-8152-d9c88f0e6b68.png)
+![image](https://user-images.githubusercontent.com/20462187/128727289-29264820-68fb-44c6-8454-5b0ab20c350f.png)
 
-Powershell Gallery link: https://www.powershellgallery.com/packages/PrettyLs
+Check out its [Powershell Gallery](https://www.powershellgallery.com/packages/PrettyLs) page
 ## Installation
+Make sure you have the latest version of [Powershell Get](https://docs.microsoft.com/en-us/powershell/scripting/gallery/installing-psget?view=powershell-7.1)
 
 Run the following command:
 ```
-Install-Module -Name PrettyLs
+Install-Module -Name PrettyLs -AllowClobber
 ```
 
-Then add the following to your $PROFILE
+Then add the following to your `$PROFILE`
 ```
 Remove-Item alias:\ls
 Import-Module PrettyLs

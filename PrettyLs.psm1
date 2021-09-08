@@ -2,7 +2,8 @@ function ls {
     param()
     $directories = Get-ChildItem -path . -directory -name
     foreach ($item in $directories){
-        Write-Output "$([char]0xe5ff) $item"
+        Write-Host $([char]0xe5ff) -ForegroundColor Blue -NoNewline
+        Write-Host " $item"
     }
     $files = Get-ChildItem -path . -file -name
     foreach ($item in $files){
