@@ -1,11 +1,11 @@
 function ls {
     param()
-    $directories = Get-ChildItem -path . -directory -name
+    $directories = Get-ChildItem -path . -directory -name -Force
     foreach ($item in $directories){
         Write-Host $([char]0xe5ff) -ForegroundColor Blue -NoNewline
         Write-Host " $item"
     }
-    $files = Get-ChildItem -path . -file -name
+    $files = Get-ChildItem -path . -file -name -Force
     foreach ($item in $files){
         $split = $item.Split('.')
         $ext = $split[$split.Count - 1]
@@ -22,7 +22,10 @@ $symbols = @{
     cpp = 0xe61d
     css = 0xe74a
     java = 0xe738
-    js = 0xe74e
+    js = 0xf81d
+    ts = 0xfbe4
+    jsx = 0xe7ba
+    tsx = 0xe7ba
     json = 0xe60b
     pdf = 0xf724
     py = 0xe73c
